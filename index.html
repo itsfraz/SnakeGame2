@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="score-board">
+            <span>Score: <span id="score">0</span></span>
+            <span>High Score: <span id="highScore">0</span></span>
+            <select id="difficulty">
+                <option value="150">Easy</option>
+                <option value="100">Medium</option>
+                <option value="75">Hard</option>
+            </select>
+        </div>
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <div class="controls">
+            <button onclick="startGame()">Start</button>
+            <button onclick="resetGame()">Reset</button>
+        </div>
+        <div class="touch-controls">
+            <button class="touch-btn" ontouchstart="move('up')">↑</button>
+            <button class="touch-btn" ontouchstart="move('left')">←</button>
+            <button class="touch-btn" ontouchstart="move('down')">↓</button>
+            <button class="touch-btn" ontouchstart="move('right')">→</button>
+        </div>
+        <div id="gameOverScreen">
+            <h2>Game Over!</h2>
+            <p>Score: <span id="finalScore"></span></p>
+            <button onclick="resetGame(); document.getElementById('gameOverScreen').style.display = 'none';">Play Again</button>
+        </div>
+    </div>
+
+
+    <script src="script.js">
+
+    </script>
+</body>
+</html>
